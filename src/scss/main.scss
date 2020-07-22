@@ -1,13 +1,65 @@
 @import "~normalize.css";
 
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
 @import "_variables";
-@import "modules/hello.scss";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body {
-  background: $wtf;
-  color: #fff;
+  background: #91b563;
+  color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  font-family: "Open Sans";
+  padding: 16px;
+}
+
+.editor {
+  width: 100%;
+  max-width: 736px;
+  &__header {
+    margin-bottom: 35px;
+    font-size: 44px;
+  }
+}
+
+.form {
+  &__textarea {
+    width: 100%;
+    min-height: 230px;
+    padding: 16px;
+    border-radius: 5px;
+  }
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 17px 0 0 0;
+  }
+}
+
+.button {
+  font-size: 14px;
+  line-height: 16px;
+  color: #4e4e5a;
+  background: #fafafc;
+  border: 1px solid #4e4e5a;
+  border-radius: 4px;
+  padding: 12px 16px;
+  &__save {
+    margin-left: 32px;
+    color: #fafafc;
+    background: #121232;
+    border: 1px solid #4e4e5a;
+  }
 }
